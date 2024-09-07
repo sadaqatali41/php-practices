@@ -153,4 +153,3 @@ $cat->sounds();
 // * 1. Tokens are short-lived and expire after a certain time.
 // * 2. Tokens are generated dynamically for each request or session.
 // * 3. more secure than API keys.
-// some changes
