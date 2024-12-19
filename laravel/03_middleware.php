@@ -4,4 +4,6 @@
 
 // * it can be used for logging for all incoming request.
 
+// * before and after middleware
+
 // * php artisan make:middleware LoggingMiddleware
