@@ -21,3 +21,20 @@ class ChildClass extends ParentClass {
 }
 
 ChildClass::callStaticMethod();
+
+// ! example 2 for static binding
+
+class Animal {
+    public static function sound() {
+        return "Animal sound";
+    }
+}
+
+class Dog extends Animal {
+    public static function sound() {
+        return "Bark";
+    }
+}
+
+$animal = 'Dog';
+echo $animal::sound(); // Output: Bark
