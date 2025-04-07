@@ -1,5 +1,7 @@
 <?php
 
+// ! Constructor mimic is a technique where we can create our own initialisation logic without using __contruct() or making it private to prevent direct instanciation
+
 // ! using Static Factory Methods
 // ? Factory methods are static methods that create and return instances of a class. They can have different parameter lists and names, allowing you to simulate multiple constructors based on different initialization scenarios.
 
