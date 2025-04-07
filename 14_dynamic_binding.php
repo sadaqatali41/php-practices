@@ -1,4 +1,5 @@
 <?php
+// dynamic binding or late binding
 // Dynamic binding happens at runtime and is resolved based on the object that is calling the method. It is used with instance methods and properties.
 
 // dynamic binding example
