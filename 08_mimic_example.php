@@ -1,5 +1,7 @@
 <?php
 
+// ! constructor mimics using named constructor
+
 class Student {
 
     protected $id;
