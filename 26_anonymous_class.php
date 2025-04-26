@@ -13,11 +13,11 @@ echo $obj->greet();
 
 // 2. Implementing an Interface with an Anonymous Class
 
-interface Logger {
+interface Loggers {
     public function log($message);
 }
 
-$logger = new class implements Logger {
+$logger = new class implements Loggers {
     public function log($message) {
         echo "Logging: " . $message . "\n";
     }
