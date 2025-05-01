@@ -1,0 +1,2 @@
+Processed payment of 100.
+Processed payment of 200.
