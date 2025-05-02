@@ -1,8 +1,10 @@
 <?php
 // static binding or early binding
-// Static binding happens at compile time. It resolves methods and properties using the class where they are defined, not where they are inherited from.
+// Static binding happens at compile time. It resolves methods and properties using the class where they are defined, 
+// not where they are inherited from.
 // Static binding is used when you want to call a method or access a property of a class,
 // but you don't want to use the class name as a prefix for the method or property name
+// static binding bound to the class.
 
 class ParentClass {
     public static function staticMethod() {
@@ -38,3 +40,6 @@ class Dog extends Animal {
 
 $animal = 'Dog';
 echo $animal::sound(); // Output: Bark
+
+
+// static binding and dynamic binding refer to how methods and properties are resolved.
