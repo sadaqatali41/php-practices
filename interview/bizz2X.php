@@ -54,3 +54,55 @@ for($i = 1; $i <= 4; $i++) {
 
 // SQL question
 // select student_id, sum(marks) AS tot_mark from exam_marks where 1=1 group by student_id order by tot_mark desc limit 0,3
+
+// ! 2nd round interview question
+
+// $arr = [1,3,4,2];
+// find the second largest number in the array
+
+function findSecondLargest($arr) {
+    if (count($arr) < 2) {
+        return null; // Not enough elements
+    }
+
+    // $first = $second = PHP_INT_MIN; or
+    $first = $second = $arr[0]; // 1
+    
+    foreach ($arr as $num) {
+        if ($num > $first) {
+            $second = $first;
+            $first = $num;
+        } elseif ($num > $second && $num != $first) {
+            $second = $num;
+        }
+    }
+    
+    return $second;
+}
+
+$arr = [1, 3, 4, 2];
+$secondLargest = findSecondLargest($arr);
+echo "The second largest number is: " . $secondLargest . PHP_EOL;
+
+// find the second lowest number in the array
+function findSecondLowest($arr) {
+    if (count($arr) < 2) {
+        return null; // Not enough elements
+    }
+
+    $first = $second = PHP_INT_MAX;
+    
+    foreach ($arr as $num) {
+        if ($num < $first) {
+            $second = $first;
+            $first = $num;
+        } elseif ($num < $second && $num != $first) {
+            $second = $num;
+        }
+    }
+    
+    return $second;
+}
+
+$secondLowest = findSecondLowest($arr);
+echo "The second lowest number is: " . $secondLowest . PHP_EOL;
