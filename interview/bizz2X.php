@@ -65,8 +65,8 @@ function findSecondLargest($arr) {
         return null; // Not enough elements
     }
 
-    // $first = $second = PHP_INT_MIN; or
-    $first = $second = $arr[0]; // 1
+    $first = $second = PHP_INT_MIN;
+    // $first = $second = $arr[0];
     
     foreach ($arr as $num) {
         if ($num > $first) {
@@ -80,7 +80,7 @@ function findSecondLargest($arr) {
     return $second;
 }
 
-$arr = [1, 3, 4, 2];
+$arr = [10, 20, 4, 45, 99, 46, 99];
 $secondLargest = findSecondLargest($arr);
 echo "The second largest number is: " . $secondLargest . PHP_EOL;
 
@@ -106,3 +106,30 @@ function findSecondLowest($arr) {
 
 $secondLowest = findSecondLowest($arr);
 echo "The second lowest number is: " . $secondLowest . PHP_EOL;
+
+
+// Find nth largest number in the array
+$arr = [1,4,3,5,2,6];
+
+function findNthLargest($arr, $nth){
+    // if array contains duplicates, remove them
+    $n = count($arr);
+
+    if($nth > $n) {
+        return null;
+    }
+
+    // sort the array in descending order
+    for($i = 0; $i < $n - 1; $i++) {
+        for($j = $i + 1; $j < $n; $j++) {
+            if($arr[$j] > $arr[$i]) {
+                $temp = $arr[$i];
+                $arr[$i] = $arr[$j];
+                $arr[$j] = $temp;
+            }
+        }
+    }
+    return $arr[$nth - 1];
+}
+$nthLargest = findNthLargest($arr, 2);
+echo "The 2nd largest number is: " . $nthLargest . PHP_EOL;
